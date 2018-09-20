@@ -6,6 +6,22 @@
 			</BreadcrumbItem>
 		</Breadcrumb><br />
 		<Button icon="md-add" type="primary" @click="newVideo">新建</Button><br /><br />
+		<Form :model="formItem" label-position="right" :label-width="100" inline>
+			<FormItem label="类型">
+	            <Select v-model="formItem.type">
+	                <Option value="beijing">New York</Option>
+	                <Option value="shanghai">London</Option>
+	                <Option value="shenzhen">Sydney</Option>
+	            </Select>
+	        </FormItem>
+			<FormItem label="年级">
+	            <Select v-model="formItem.class">
+	                <Option value="beijing">New York</Option>
+	                <Option value="shanghai">London</Option>
+	                <Option value="shenzhen">Sydney</Option>
+	            </Select>
+	        </FormItem>
+	    </Form>
 		<Table :columns="columns" :data="dataList"></Table><br />
 		<Page :total="total" show-total/>
   	</div>
@@ -17,6 +33,10 @@ export default {
 	data(){
 		return{
 			total:100,
+			formItem:{
+				type:"",
+				class:""
+			},
 			columns:[
 				{
 					title: 'Name',

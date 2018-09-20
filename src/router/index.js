@@ -61,6 +61,5 @@ export default new Router({
 	    	name: 'articleAlter',
 	    	component: articleAlter
 	    }
-
 	]
 })

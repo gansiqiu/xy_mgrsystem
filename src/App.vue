@@ -3,7 +3,7 @@
 	  	<div class="layout">
           	<Layout>
               	<Sider ref="side1" hide-trigger collapsible :collapsed-width="78" width="240" v-model="isCollapsed">
-                  	<Menu active-name="1" theme="dark" width="auto" :class="menuitemClasses" @on-select="menuTap">
+                  	<Menu :active-name="activeName" theme="dark" width="auto" :class="menuitemClasses" @on-select="menuTap">
 						<MenuItem name="0" >
                           	<img  style="width:100%;height:auto;" src= "./assets/logo.jpg"/>
                       	</MenuItem>
@@ -47,7 +47,7 @@ export default {
   	name: 'App',
   	data () {
 	  	return {
-			// logoImg:"./assets/logo.jpg",
+			activeName:"1",
 		  	isCollapsed: false
 	  	}
   	},
@@ -70,7 +70,7 @@ export default {
 		  	this.$refs.side1.toggleCollapse();
 	  	},
 	  	menuTap (event){
-		  		let that = this;
+		  	let that = this;
 			if(event == 1){
 				this.$router.push({name:"videoType"});
 			}else if(event == 2){
@@ -83,7 +83,10 @@ export default {
 				this.$router.push({name:"articleManage"});
 			}
 	  	}
-  	}
+  	},
+	created(){
+		this.$router.push({name:"videoType"});
+	}
 }
 </script>
 

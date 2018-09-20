@@ -10,7 +10,7 @@
 	    </Breadcrumb><br>
 		<Form :model="formItem" :label-width="80">
 		   <FormItem label="好文类别:">
-			   <Input v-model="formItem.articleType" placeholder="请输入好文类别名称" clearable></Input>
+			   <Input v-model="formItem.articleType" placeholder="请输入好文类别名称..." clearable></Input>
 		   </FormItem>
 		   	<FormItem>
 	            <Button type="primary" long @click="submitClick">提交</Button>

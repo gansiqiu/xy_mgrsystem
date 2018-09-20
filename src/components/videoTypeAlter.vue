@@ -10,7 +10,7 @@
 	    </Breadcrumb><br>
 		<Form :model="formItem" :label-width="80">
 		   <FormItem label="视频类别:">
-			   <Input v-model="formItem.videoType" placeholder="请输入视频类别名称" clearable></Input>
+			   <Input v-model="formItem.videoType" placeholder="请输入视频类别名称..." clearable></Input>
 		   </FormItem>
 		   	<FormItem>
 	            <Button type="primary" long @click="submitClick">提交</Button>

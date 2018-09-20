@@ -10,7 +10,7 @@
   		</Breadcrumb><br />
 		<Form :model="formItem" :label-width="80">
 		   	<FormItem label="年级名:">
-			   	<Input v-model="formItem.videoClass" placeholder="请输入年级名称" clearable></Input>
+			   	<Input v-model="formItem.videoClass" placeholder="请输入年级名称..." clearable></Input>
 		   	</FormItem>
 			<FormItem>
 				<Button type="primary" long @click="submitClick">提交</Button>
@@ -32,6 +32,7 @@ export default {
 	methods:{
 		submitClick(){
 			console.log("submit");
+			this.$router.push({name:"videoClass"});
 		}
 	}
 }

@@ -10,17 +10,20 @@
   		</Breadcrumb><br />
 		<Form :model="formItem" :label-width="80">
 		   	<FormItem label="视频名:">
-			   	<Input v-model="formItem.videoName" placeholder="请输入视频名称" clearable></Input>
+			   	<Input v-model="formItem.videoName" placeholder="请输入视频名称..." clearable></Input>
+		   	</FormItem>
+			<FormItem label="视频介绍:">
+			   	<Input v-model="formItem.introduce" placeholder="请输入视频介绍..." clearable></Input>
 		   	</FormItem>
 			<FormItem label="类型:">
-	            <Select v-model="formItem.type" placeholder="选择类型">
+	            <Select v-model="formItem.type" placeholder="选择类型...">
 	                <Option value="beijing">New York</Option>
 	                <Option value="shanghai">London</Option>
 	                <Option value="shenzhen">Sydney</Option>
 	            </Select>
 	        </FormItem>
 			<FormItem label="年级:">
-	            <Select v-model="formItem.class" placeholder="选择年级">
+	            <Select v-model="formItem.class" placeholder="选择年级...">
 	                <Option value="beijing">New York</Option>
 	                <Option value="shanghai">London</Option>
 	                <Option value="shenzhen">Sydney</Option>
@@ -39,7 +42,8 @@ export default {
 	data(){
 		return{
 			formItem:{
-				videoName:""
+				videoName:"",
+				introduce:""
 			}
 		}
 	},

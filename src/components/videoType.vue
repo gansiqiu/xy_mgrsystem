@@ -19,12 +19,12 @@ export default {
 			total:100,
 			columns:[
 				{
-                    title: 'Name',
-                    key: 'name'
+                    title: 'id',
+                    key: 'id'
                 },
                 {
-                    title: 'Age',
-                    key: 'age'
+                    title: '类型名称',
+                    key: 'title'
                 },
                 {
                     title: 'Address',
@@ -32,30 +32,11 @@ export default {
                 }
 			],
 			dataList: [
-                {
-                    name: 'John Brown',
-                    age: 18,
-                    address: 'New York No. 1 Lake Park',
-                    date: '2016-10-03'
-                },
-                {
-                    name: 'Jim Green',
-                    age: 24,
-                    address: 'London No. 1 Lake Park',
-                    date: '2016-10-01'
-                },
-                {
-                    name: 'Joe Black',
-                    age: 30,
-                    address: 'Sydney No. 1 Lake Park',
-                    date: '2016-10-02'
-                },
-                {
-                    name: 'Jon Snow',
-                    age: 26,
-                    address: 'Ottawa No. 2 Lake Park',
-                    date: '2016-10-04'
-                }
+                { id:1, title: '1', age: 1, address: '1', date: '1' },
+	            { id:2, title: '2', age: 2, address: '2', date: '2' },
+	            { id:3, title: '3', age: 3, address: '3', date: '3' },
+	            { id:4, title: '4', age: 4, address: '4', date: '4' },
+	            { id:5, title: '5', age: 5, address: '5', date: '5' }
             ]
         }
     },
@@ -63,7 +44,10 @@ export default {
 		newType(){
 			this.$router.push({name:"videoTypeAlter"});
 		}
-    }
+    },
+	created(){
+
+	}
 }
 </script>
 
