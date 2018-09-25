@@ -6,7 +6,7 @@
 			</BreadcrumbItem>
 		</Breadcrumb><br />
 		<Button icon="md-add" type="primary" @click="newVideo">新建</Button><br /><br />
-		<Form :model="formItem" label-position="right" :label-width="100" inline>
+		<Form :model="formItem" label-position="right" :label-width="80" inline>
 			<FormItem label="类型">
 	            <Select v-model="formItem.type">
 	                <Option value="beijing">New York</Option>
@@ -90,5 +90,8 @@ export default {
 <style lang="css">
 .videoManage{
 	padding: 20px;
+}
+.ivu-select-selection{
+	width: 200px;
 }
 </style>
